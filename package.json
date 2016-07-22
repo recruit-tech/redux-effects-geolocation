@@ -1,6 +1,6 @@
 {
   "name": "redux-effects-geolocation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "redux-effects middleware for Geolocation API",
   "keywords": [
     "actions",
