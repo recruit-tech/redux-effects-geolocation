@@ -24,6 +24,8 @@ export function getPosition(options) {
  * Middleware
  */
 export default function geoMiddleware() {
+  const navigator = typeof window !== 'undefined' ? window.navigator : null;
+
   return ({ dispatch }) => (next) => (action) => {
     if (action.type !== GET_POSITION) {
       return next(action);

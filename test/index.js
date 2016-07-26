@@ -6,6 +6,13 @@ import { getPosition } from '../src';
 import { POSITION, installGeoLocationSuccess, installGeoLocationFailure } from './fixtures/getlocation';
 import createStore from './fixtures/createStore';
 
+test('unsupported', () => {
+  const store = createStore();
+  store.dispatch(getPosition()).then(assert.fail, mustCall((err) => {
+    assert(/not supported/.test(err.message));
+  }));
+});
+
 test('geolocation, success', () => {
   installGeoLocationSuccess();
   const store = createStore();

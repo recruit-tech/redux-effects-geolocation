@@ -11,22 +11,26 @@ export const POSITION = {
 };
 
 export function installGeoLocationSuccess() {
-  global.navigator = {
-    geolocation: {
-      getCurrentPosition(success, failure, options) {
-        success(POSITION);
+  global.window = {
+    navigator: {
+      geolocation: {
+        getCurrentPosition(success, failure, options) {
+          success(POSITION);
+        },
       },
     },
   };
 }
 
 export function installGeoLocationFailure() {
-  global.navigator = {
-    geolocation: {
-      getCurrentPosition(success, failure, options) {
-        const err = new Error('User denied Geolocation');
-        err.code = 1;
-        failure(err);
+  global.window = {
+    navigator: {
+      geolocation: {
+        getCurrentPosition(success, failure, options) {
+          const err = new Error('User denied Geolocation');
+          err.code = 1;
+          failure(err);
+        },
       },
     },
   };
