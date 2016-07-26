@@ -34,10 +34,11 @@
     "fixpack": "fixpack",
     "jscs": "jscs src test",
     "lint": "npm-run-all eslint jscs",
-    "test": "eater"
+    "preversion": "npm test",
+    "test": "eater",
+    "version": "npm-run-all clean build"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "active-cache-babel-register": "0.1.3",
     "babel-cli": "6.11.4",
