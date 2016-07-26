@@ -33,7 +33,7 @@ getting current position:
 ```javascript
 import { getPosition } from 'redux-effects-geolocation';
 
-const propmise = store.dispatch(getPosition());
+const promise = store.dispatch(getPosition());
 ```
 
 getting current position with options:
@@ -41,7 +41,7 @@ getting current position with options:
 ```javascript
 import { getPosition } from 'redux-effects-geolocation';
 
-const propmise = store.dispatch(getPosition({ enableHighAccuracy: true }));
+const promise = store.dispatch(getPosition({ enableHighAccuracy: true }));
 ```
 
 Note: If Geolocation API is not available, the Promise is always rejected.
