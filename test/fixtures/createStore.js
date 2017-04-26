@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from 'redux';
-import { default as geo } from '../../src';
+import geo from '../../src';
 
 export default function () {
   return createStore(() => {

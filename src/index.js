@@ -32,7 +32,10 @@ export default function geoMiddleware() {
     }
 
     if (!navigator || !navigator.geolocation) {
-      return Promise.reject(Object.assign(new Error('geo location API is not supported'), { code: NOT_SUPPORTED }));
+      return Promise.reject(Object.assign(
+        new Error('geo location API is not supported'),
+        { code: NOT_SUPPORTED },
+      ));
     }
 
     const { options } = action.payload;

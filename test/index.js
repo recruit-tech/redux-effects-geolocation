@@ -1,9 +1,12 @@
 import { test } from 'eater/runner';
 import assert from 'assert';
-import { useFakeTimers } from 'sinon';
 import mustCall from 'must-call';
 import { getPosition } from '../src';
-import { POSITION, installGeoLocationSuccess, installGeoLocationFailure } from './fixtures/getlocation';
+import {
+  POSITION,
+  installGeoLocationSuccess,
+  installGeoLocationFailure,
+} from './fixtures/getlocation';
 import createStore from './fixtures/createStore';
 
 test('unsupported', () => {
